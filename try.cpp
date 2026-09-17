@@ -2,40 +2,31 @@
 
 using namespace std;
 
-class interest
+class time
 {
 private:
-    float p, t, r, si;
+    int hour, minute, second;
 
 public:
     void input()
     {
-        cout << "Enter p t r: ";
-        cin >> p >> t >> r;
-    }
-
-    void calculate()
-    {
-        si = (p * t * r)/100;
+        cout << "Enter 1st time........" << endl;
+        cout << "Enter Hour: ";
+        cin >> hour;
+        cout << "Enter Minute: ";
+        cin >> minute;
+        cout << "Enter Second: ";
+        cin >> second;
     }
 
     void display()
     {
-        cout << "Simple interest is= " << si;
+        cout << "Your Total time........." << endl;
+        cout << hour << ":" << minute << ":" << second;
+    }
+
+    time add(time t)
+    {
+        t.input();
     }
 };
-
-interest simple(interest obj)
-{
-    obj.calculate();
-    return obj;
-}
-
-int main()
-{
-    interest a,b;
-    a.input();
-    b = simple(a);
-    b.display();
-    return 0;
-}
