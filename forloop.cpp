@@ -10,3 +10,13 @@ void line(int l = 100)
     }
     cout << endl;
 }
+
+void center(int c = 45)
+{
+    for (int i = 0; i < c; i++)
+    {
+        cout << " ";
+    }
+    
+}
+
