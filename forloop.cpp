@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -20,3 +21,10 @@ void center(int c = 45)
     
 }
 
+void heading( string header)
+{
+    line();
+    center((100-header.length())/2);
+    cout << header << endl;
+    line();
+}
