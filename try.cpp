@@ -1,32 +1,53 @@
 #include <iostream>
-
 using namespace std;
 
-class time
+class Complex
 {
 private:
-    int hour, minute, second;
+    int real, imag;
 
 public:
     void input()
     {
-        cout << "Enter 1st time........" << endl;
-        cout << "Enter Hour: ";
-        cin >> hour;
-        cout << "Enter Minute: ";
-        cin >> minute;
-        cout << "Enter Second: ";
-        cin >> second;
+        cout << "Enter real and imaginary part: ";
+        cin >> real >> imag;
     }
 
     void display()
     {
-        cout << "Your Total time........." << endl;
-        cout << hour << ":" << minute << ":" << second;
+        cout << real;
+
+        if (imag >= 0)
+            cout << " + " << imag << "i";
+        else
+            cout << " - " << -imag << "i";
     }
 
-    time add(time t)
+    Complex operator-(Complex c)
     {
-        t.input();
+        Complex temp;
+
+        temp.real = real - c.real;
+        temp.imag = imag - c.imag;
+
+        return temp;
     }
 };
+
+int main()
+{
+    Complex c1, c2, c3;
+
+    cout << "Enter first complex number:" << endl;
+    c1.input();
+
+    cout << "Enter second complex number:" << endl;
+    c2.input();
+
+    c3 = c1 - c2;
+
+    cout << "Difference = ";
+    c3.display();
+
+    return 0;
+}
