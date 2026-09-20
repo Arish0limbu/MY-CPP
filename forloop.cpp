@@ -50,9 +50,31 @@ void leftonetofive()
 
 }
 
+void rightonetofive()
+{
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 5; j > i; j--)
+        {
+            cout << " ";
+        }
+
+        for (int j = 0; j < i; j++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+}
+
 int main()
 {
     cls();
     heading("|| Left 1 to 5 star ||");
     leftonetofive();
+    heading("|| Right 1 to 5 star ||");
+    rightonetofive();
+
+
 }
