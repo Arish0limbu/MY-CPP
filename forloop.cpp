@@ -23,9 +23,7 @@ void center(int c = 45)
 void cls()
 {
 #ifdef WIN32
-
     system("cls");
-
 #else
     system("clear");
 #endif
@@ -39,8 +37,22 @@ void heading(string header)
     line();
 }
 
+void leftonetofive()
+{
+    for (int i = 0; i <= 5; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+}
+
 int main()
 {
-
+    cls();
     heading("|| Left 1 to 5 star ||");
+    leftonetofive();
 }
