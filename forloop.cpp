@@ -74,7 +74,7 @@ int main()
     heading("|| Left 1 to 5 star ||");
     leftonetofive();
     heading("|| Right 1 to 5 star ||");
-    rightonetofive();
+    
 
 
 }
